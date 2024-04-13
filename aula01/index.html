@@ -4,15 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Dev. Web</title>
 </head>
-<body>
-    <center>
-        <div>
-            cvbhszdgfvbhwbfvnw
+<script>
+    var intervalId; // Variável para armazenar o ID do intervalo
+
+function changeColor() {
+    // Array de cores possíveis
+    var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+
+    // Seleciona uma cor aleatória do array
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    // Aplica a cor de fundo ao body do documento
+    document.body.style.backgroundColor = randomColor;
+}
+
+function startColorChange() {
+    // Chama a função changeColor inicialmente
+    changeColor();
+
+    // Inicia o loop de troca de cores a cada 0.5 segundos
+    intervalId = setInterval(changeColor, 500);
+}
+
+function stopColorChange() {
+    // Cancela o loop de troca de cores
+    setInterval(changeColor, 100);
+    clearInterval(intervalId);
+}
+
+</script>
+<body class="page">
+    <div class="header">
+        <div class="logo">
+            <h1>LOGO</h1>
         </div>
-    </center>
-    
-    <h1>Quero ir pra casa socorro</h1>
+        <ul class="menu">
+            <li>Home</li>
+            <li>Produtos</li>
+            <li>Promoções</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="content">
+            <h2>Veja minhas novidades AGORA!</h2>
+            <p>Conteúdo do Site lado esquerdo</p>
+        </div>
+        <div class="sidebar">
+            <p>ANÚNICIO</p>
+        </div>
+    </div>
+    <br><br>
+    <footer>
+        <p>Este é o meu site</p>
+    </footer>
+    <button onClick="startColorChange()">Clique aqui par uma surpresa!</button>
+    <button onClick="stopColorChange()">Cuidado que vai dar ruim</button>
 </body>
 </html>
