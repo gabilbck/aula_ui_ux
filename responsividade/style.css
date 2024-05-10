@@ -1,0 +1,59 @@
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper>*{
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+}
+.header{
+    background: rgb(233, 51, 19);
+    height: 120px;
+}
+.footer{
+    background: lightgreen;
+    height: 80px;
+}
+.main{
+    text-align: left;
+    background: deepskyblue;
+    height: 300px;
+    font-size: 24px;
+}
+.aside1{
+    background: gold;
+}
+.aside2{
+    background: rgb(105, 255, 240);
+}
+.aside3{
+    background: rgb(37, 35, 36);
+}
+
+@media all and (min-width: 800px){
+    .main{
+        flex: 4;
+        order: 1;
+    }
+    .aside1{
+        order: 2;
+    }
+    .aside2{
+        order: 3;
+    }
+    .aside3{
+        order: 4;
+    }
+    .footer{
+        order: 5;
+    }
+}
+
+@media all and (min-width:600px){
+    .aside {
+        flex: 1;
+    }
+}
